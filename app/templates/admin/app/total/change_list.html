@@ -1,0 +1,21 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools-items %}
+  <li>
+	<a href="{% url 'start_search' %}" class="addlink" id="start_search">
+     Начать сканирование
+    </a>
+    <a href="{% url 'total_clear' %}" class="addlink" id="total_clear">
+     Очистить записи
+    </a>
+	<a href="/admin/app/total/add/" class="addlink">
+     Добавить запись
+    </a>
+    <a href="{% url 'export_search_to_excel' %}" class="addlink" id="export_search_to_excel">
+     Экспорт в XLS
+    </a>
+      <a href="{% url 'base_graph' %}" target="_blank" class="addlink" id="base_graph">
+     Граф доменов/поддоменов
+    </a>
+  </li>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools-items %}
+  <li>
+	<a href="{% url 'keywords_clear' %}" class="addlink" id="keywords_clear">
+     Очистить ключевые слова
+    </a>
+	<a href="/admin/app/keywords/add/" class="addlink">
+     Добавить ключевое слово
+    </a>
+  </li>
+{% endblock %}

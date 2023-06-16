@@ -1,0 +1,12 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools-items %}
+  <li>
+	<a href="{% url 'domains_clear' %}" class="addlink" id="domains_clear">
+     Очистить домены
+    </a>
+	<a href="/admin/app/domains/add/" class="addlink">
+     Добавить домен
+    </a>
+  </li>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools-items %}
+<li>
+
+    <a href="{% url 'relations_clear' %}" class="addlink" id="relations_clear">
+        Очистить историю
+    </a>
+    <a href="/admin/app/relations/add/" class="addlink">
+        Добавить историю
+    </a>
+    <a href="{% url 'relations_graph' %}" target="_blank" class="addlink" id="relations_graph">
+        Граф связей
+    </a>
+</li>
+{% endblock %}

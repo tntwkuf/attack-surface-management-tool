@@ -1,0 +1,46 @@
+ /*PopUP */
+
+.popUp_import_wrapp {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(255 255 255 / 78%);
+	z-index: 1000;
+}
+
+.popUp_import {
+	position: absolute;
+	left: 50vw;
+	top: 10vh;
+	transform: translate(-50%, 50%);
+	border: 1px solid #000;
+	border-radius: 10px;
+	background-color: #417690;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+#bulletin_import_popup_close {
+	align-self: flex-end;
+	margin-bottom: 25px;
+}
+
+.field-services, .field-vuln{
+	display: flex;
+}
+.field-services div, .field-vuln div{
+	margin-right:3vh;
+}
+
+.field-services div:not(:first-child) label,
+.field-vuln div:not(:first-child) label {
+	width: 50px;
+}
+
+.field-services div:not(:first-child) input,
+.field-vuln div:not(:first-child) input {
+	width: 200px;
+}

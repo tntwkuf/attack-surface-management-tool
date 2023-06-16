@@ -1,0 +1,12 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools-items %}
+  <li>
+	<a href="{% url 'progress_clear' %}" class="addlink" id="progress_clear">
+     Очистить прогресс
+    </a>
+	<a href="/admin/app/progress/add/" class="addlink">
+     Добавить прогресс
+    </a>
+  </li>
+{% endblock %}

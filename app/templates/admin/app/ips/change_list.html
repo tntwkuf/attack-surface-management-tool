@@ -1,0 +1,12 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools-items %}
+  <li>
+	<a href="{% url 'ips_clear' %}" class="addlink" id="ips_clear">
+     Очистить IP-адреса
+    </a>
+	<a href="/admin/app/ips/add/" class="addlink">
+     Добавить IP-адрес
+    </a>
+  </li>
+{% endblock %}

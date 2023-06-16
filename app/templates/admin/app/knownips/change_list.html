@@ -1,0 +1,35 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools-items %}
+<li>
+    <a href="#" class="addlink" id="import_CVE">
+        Импорт диапазонов
+    </a>
+    <a href="{% url 'known_ips_clear' %}" class="addlink" id="known_ips_clear">
+        Очистить диапазоны
+    </a>
+    <a href="/admin/perimetr/knownips/add/" class="addlink">
+        Добавить диапазон
+    </a>
+</li>
+{% endblock %}
+
+{% block content %}
+{{ block.super }}
+<div class="popUp_import_wrapp">
+    <div class="popUp_import">
+        <a class="button" id="bulletin_import_popup_close">Закрыть</a>
+
+
+        <form method="POST" action="{% url 'import_from_perimetr' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="id_file">File:</label> <input type="file" name="file" required="" id="id_file">
+            <input class="deletelink" type="submit" value="Импортировать">
+        </form>
+    </div>
+</div>
+
+{% block actions %}
+{{ block.super }}
+{% endblock %}
+{% endblock %}
